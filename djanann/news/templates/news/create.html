@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавить запись{% endblock%}
+{% block content %}
+<div class="features">
+    <h1>Форма для записи</h1>
+    <form method="post" >
+
+        {% csrf_token %} <br>
+        {{ form.title }} <br>
+        {{ form.anons }} <br>
+        {{ form.full_text }} <br>
+        {{ form.date }} <br>
+        <span>{{error}}</span>
+
+        <button class="btn btn-secondary btn-lg btn-block" type="submit">Добавить статью</button> <br>
+    </form>
+
+
+
+
+</div>
+{% endblock%}
